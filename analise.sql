@@ -29,3 +29,9 @@ SELECT PrimeiroNome, UltimoNome FROM dbo.Atores WHERE Genero = 'F' ORDER BY Prim
 SELECT f.Nome, g.Genero FROM dbo.FilmesGenero fg
 INNER JOIN dbo.Filmes f ON fg.IdFilme = f.Id
 INNER JOIN dbo.Generos g ON fg.IdGenero = g.Id;
+
+-- 11 - Buscar o nome do filme e o gênero do tipo "Mistério"
+SELECT f.Nome, g.Genero FROM dbo.FilmesGenero fg
+INNER JOIN dbo.Filmes f ON fg.IdFilme = f.Id
+INNER JOIN dbo.Generos g ON fg.IdGenero = g.Id
+WHERE g.Genero = 'Mistério';
