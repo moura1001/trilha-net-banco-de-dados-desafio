@@ -35,3 +35,8 @@ SELECT f.Nome, g.Genero FROM dbo.FilmesGenero fg
 INNER JOIN dbo.Filmes f ON fg.IdFilme = f.Id
 INNER JOIN dbo.Generos g ON fg.IdGenero = g.Id
 WHERE g.Genero = 'Mistério';
+
+-- 12 - Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+SELECT f.Nome, a.PrimeiroNome, a.UltimoNome, ef.Papel FROM dbo.ElencoFilme ef
+INNER JOIN dbo.Filmes f ON ef.IdFilme = f.Id
+INNER JOIN dbo.Atores a ON ef.IdAtor = a.Id;
