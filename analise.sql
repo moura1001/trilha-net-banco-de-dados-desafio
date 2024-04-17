@@ -24,3 +24,8 @@ SELECT PrimeiroNome, UltimoNome FROM dbo.Atores WHERE Genero = 'M';
 
 -- 9 - Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 SELECT PrimeiroNome, UltimoNome FROM dbo.Atores WHERE Genero = 'F' ORDER BY PrimeiroNome;
+
+-- 10 - Buscar o nome do filme e o gênero
+SELECT f.Nome, g.Genero FROM dbo.FilmesGenero fg
+INNER JOIN dbo.Filmes f ON fg.IdFilme = f.Id
+INNER JOIN dbo.Generos g ON fg.IdGenero = g.Id;
