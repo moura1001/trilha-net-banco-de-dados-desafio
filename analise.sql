@@ -9,3 +9,6 @@ SELECT Nome, Ano, Duracao FROM dbo.Filmes WHERE Nome = 'De Volta para o Futuro';
 
 -- 4 - Buscar os filmes lançados em 1997
 SELECT Nome, Ano, Duracao FROM dbo.Filmes WHERE Ano = 1997;
+
+-- 5 - Buscar os filmes lançados APÓS o ano 2000
+SELECT Nome, Ano, Duracao FROM dbo.Filmes WHERE Ano > 2000;
